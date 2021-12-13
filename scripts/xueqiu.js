@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 
 const DING_TALK_URL = 'https://oapi.dingtalk.com/robot/send?access_token='
 const DING_TALK_TOKENS = process.env.xueqiu_bot_dingtalk_token.split(',');
+const RECENT_GAP_MILLISECOND = 2 * 24 * 60 * 60 * 1000;
 
 const COOKIE = process.env.xueqiu_cookie;
 const FAKE_HEADERS = {
@@ -40,6 +41,8 @@ const promiseQueue = REBALANCINGS.map(item => {
       const { name, symbol, last_success_rebalancing = {}, sell_rebalancing = {} } = rbDataObject;
 
       const recentRebalancingTime = new Date(last_success_rebalancing.updated_at).toLocaleString();
+      // 判断是否为近2天内的调仓
+      const recentlyRebalanced = Date.now() - last_success_rebalancing.updated_at < RECENT_GAP_MILLISECOND;
       const recentRebalancingHistory = sell_rebalancing?.rebalancing_histories?.map(item => {
         return `${item.stock_name}(${item.stock_symbol}) ${item.prev_weight_adjusted || 0}% -> ${item.target_weight || 0}%`;
       });
@@ -47,6 +50,7 @@ const promiseQueue = REBALANCINGS.map(item => {
         name,
         symbol,
         recentTime: recentRebalancingTime,
+        recentlyRebalanced,
         recentRebalancingHistory,
       })
     });
@@ -57,7 +61,7 @@ const promiseQueue = REBALANCINGS.map(item => {
     let dingtalkString = [];
     jsonDatas.forEach(item => {
       const recentRebalancingHistoryString = item.recentRebalancingHistory.map(item => `- ${item}`).join('\n\n');
-      dingtalkString.push(`#### <font color=\"#5B58CF\"><strong>${item.name} (${item.symbol})</strong></font>\n最近调仓时间：${item.recentTime} \n\n 调仓详情：\n\n${recentRebalancingHistoryString}\n\n`)
+      dingtalkString.push(`#### <font color=\"#5B58CF\">${item.name} (${item.symbol})</font>\n最近调仓时间: ${item.recentlyRebalanced ? "<font color=\"#FF0000\">"+ item.recentTime +"</font>" : item.recentTime} \n\n 调仓详情: \n\n${recentRebalancingHistoryString}\n\n`)
     });
   
     const dingtalkQUeue = DING_TALK_TOKENS.map(item => {
