@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 const DING_TALK_URL = 'https://oapi.dingtalk.com/robot/send?access_token='
 const DING_TALK_TOKENS = process.env.xueqiu_bot_dingtalk_token.split(',');
-const RECENT_GAP_MILLISECOND = 2 * 24 * 60 * 60 * 1000;
+const RECENT_GAP_MILLISECOND = (process.env.xueqiu_recent_days || 2) * 24 * 60 * 60 * 1000;
 
 const COOKIE = process.env.xueqiu_cookie;
 const FAKE_HEADERS = {
