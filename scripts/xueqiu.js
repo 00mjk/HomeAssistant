@@ -61,7 +61,7 @@ const promiseQueue = REBALANCINGS.map(item => {
     let dingtalkString = [];
     jsonDatas.forEach(item => {
       const recentRebalancingHistoryString = item.recentRebalancingHistory.map(item => `- ${item}`).join('\n\n');
-      dingtalkString.push(`#### **<font color=\"#5B58CF\">${item.name} (${item.symbol})</font>**\n最近调仓时间: ${item.recentlyRebalanced ? "**<font color=\"#FF0000\">"+ item.recentTime +"</font>**" : item.recentTime} \n\n 调仓详情: \n\n${recentRebalancingHistoryString}\n\n`)
+      dingtalkString.push(`#### **<font color=\"#5B58CF\">${item.name} (${item.symbol})</font>**\n最近调仓时间: ${item.recentlyRebalanced ? "**<font color=\"#FF0000\">"+ item.recentTime +"</font>**" : item.recentTime} \n\n 调仓详情: \n\n${recentRebalancingHistoryString}\n`)
     });
   
     const dingtalkQUeue = DING_TALK_TOKENS.map(item => {
