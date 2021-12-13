@@ -26,5 +26,6 @@
 `xueqiu_bot_dingtalk_token` | 钉钉机器人的 token (url的token字段的值)
 `xueqiu_cookie` | xueqiu上的cookie信息
 `xueqiu_cube_codes` | 要监听的组合的code, 逗号分隔，不要带空格
+`xueqiu_recent_days` | 最近N天有调仓的高亮显示，不设置则默认2天
 
 ![image](https://user-images.githubusercontent.com/12368943/145616434-49d147b8-645b-4db0-b35c-c228b9c64a42.png)
