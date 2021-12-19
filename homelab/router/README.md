@@ -18,10 +18,10 @@ https://user-images.githubusercontent.com/12368943/146675964-6c1bf154-d2f4-48de-
 
 出国、去广告
 
-![R4S旁路由](https://github.com/KrabsWong/HomeAssistant/blob/main/files/router-r4s-side.jpeg?raw=true)
+![R4S旁路由](https://user-images.githubusercontent.com/12368943/146676079-066bbaf3-4c80-4c87-9997-a875432610f8.jpeg)
 
-### 硬件-X86小主机
+### 硬件-x86小主机
 
-![X86小主机](https://github.com/KrabsWong/HomeAssistant/blob/main/files/router-x86.jpeg?raw=true)
+![x86小主机](https://user-images.githubusercontent.com/12368943/146676095-266bf18b-9b20-4864-8d7c-d7f2d8b2d4f3.jpeg)
 
 目前 Homelab 主要就在这个小主机上搞（保不齐哪天搞个服务器？）
