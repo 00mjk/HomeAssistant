@@ -19,7 +19,7 @@
 
 使用的 docker 镜像 github 地址：https://github.com/jeessy2/ddns-go
 
-```docker
+```dockerfile
 # docker run -d --name ddns-go --restart=always --net=host -v /opt/ddns-go:/root jeessy/ddns-go
 
 ---

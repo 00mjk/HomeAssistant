@@ -4,9 +4,13 @@
 
 ### 软件
 
-软路由系统选择的是 openwrt（矮小少缝合怪版本），一般月更。
+软路由固件用的是矮小少缝合怪的 openwrt，一般月更。
 
 电报群：[https://t.me/aixiaoshao](https://t.me/aixiaoshao)
+
+其他固件下载（自行选择，不做推荐）
+- eSir：[电报群](https://t.me/esirplayground)，[Google网盘](https://bit.ly/esirpg_googledrive)
+- jingleijack：[X86_64多版本](https://github.com/jingleijack/X86_64-TEST/releases)
 
 ### 硬件-主路由
 
