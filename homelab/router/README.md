@@ -12,9 +12,7 @@
 
 主要用来拨号、DHCP。弱电箱太小，x86小主机实在放不下。
 
-<video id="video" controls="" preload="none" poster="封面">
-    <source id="mp4" src="https://github.com/KrabsWong/HomeAssistant/blob/main/files/router-r4s-main.mp4?raw=true" type="video/mp4">
-</video>
+https://user-images.githubusercontent.com/12368943/146675964-6c1bf154-d2f4-48de-856e-05b9c700a1b6.mp4
 
 ### 硬件-旁路由
 
