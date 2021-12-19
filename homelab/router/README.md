@@ -8,9 +8,10 @@
 
 电报群：[https://t.me/aixiaoshao](https://t.me/aixiaoshao)
 
-其他固件下载（自行选择，不做推荐）
+其他固件下载或自行编译（自行选择，不做推荐）
 - eSir：[电报群](https://t.me/esirplayground)，[Google网盘](https://bit.ly/esirpg_googledrive)
 - jingleijack：[X86_64多版本](https://github.com/jingleijack/X86_64-TEST/releases)
+- 自行编译：[eSir的文档](https://github.com/esirplayground/Compile_OpenWrt_Tutorial)
 
 ### 硬件-主路由
 
